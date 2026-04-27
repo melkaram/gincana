@@ -13,7 +13,7 @@ $turmas = ["9° ANO", "1° EM", "2° EM", "3° EM"];
 
 <div class="container">
 
-<h1>🏆 Gincana Esportiva SENAI</h1>
+<h1>Gincana Esportiva SENAI</h1>
 
 <h2>Registrar Jogo</h2>
 
