@@ -2,23 +2,34 @@
 
 $dados = json_decode(file_get_contents("dados.json"), true);
 
+//quando não existe dados ainda
+if(!$dados){
+    $dados = ["jogos" => []];
+}
+
 $turmas = ["9° ANO", "1° EM", "2° EM", "3° EM"];
 
 $pontos = [];
+
 
 foreach($turmas as $turma){
     $pontos[$turma] = 0;
 }
 
-foreach($dados["jogos"] as $jogo){
+//parte que soma os pontos
+if(isset($dados["jogos"])){
 
-    $vencedor = $jogo["vencedor"];
+    foreach($dados["jogos"] as $jogo){
 
-    if(isset($pontos[$vencedor])){
-        $pontos[$vencedor]++;
+        $vencedor = trim($jogo["vencedor"] ?? "");
+
+        if(isset($pontos[$vencedor])){
+            $pontos[$vencedor]++;
+        }
     }
 }
 
+//deixa em ordem de liderança que nem o sor Jonatan pediu
 arsort($pontos);
 
 ?>
@@ -36,8 +47,8 @@ arsort($pontos);
 
 <h1>Classificação</h1>
 
-<table>
-
+//criação da tabela
+<table border="1">
 <tr>
 <th>Turma</th>
 <th>Pontos</th>
@@ -45,6 +56,7 @@ arsort($pontos);
 
 <?php foreach($pontos as $turma => $pt){ ?>
 
+//cria uma linha p cada turma
 <tr>
 <td><?= $turma ?></td>
 <td><?= $pt ?></td>
@@ -54,6 +66,7 @@ arsort($pontos);
 
 </table>
 
+<br>
 <a href="index.php">Voltar</a>
 
 </div>
