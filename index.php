@@ -18,7 +18,7 @@ $turmas = ["9° ANO", "1° EM", "2° EM", "3° EM"];
 <h2>Registrar Jogo</h2>
 
 
-//envia as informações obtidas para o salvar_jogo.php
+<!-- envia as informações obtidas para o salvar_jogo.php -->
 <form action="salvar_jogo.php" method="POST"> 
 
 <select name="equipe1" required>

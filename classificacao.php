@@ -47,7 +47,7 @@ arsort($pontos);
 
 <h1>Classificação</h1>
 
-//criação da tabela
+ <!-- criação da tabela -->
 <table border="1">
 <tr>
 <th>Turma</th>
@@ -56,7 +56,7 @@ arsort($pontos);
 
 <?php foreach($pontos as $turma => $pt){ ?>
 
-//cria uma linha p cada turma
+<!-- cria uma linha p cada turma -->
 <tr>
 <td><?= $turma ?></td>
 <td><?= $pt ?></td>
