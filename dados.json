@@ -1,16 +1,5 @@
 {
     "jogos": [
-        {
-            "equipe1": "1\u00b0 EM",
-            "equipe2": "2\u00b0 EM",
-            "modalidade": "volei",
-            "vencedor": "1\u00b0 EM"
-        },
-        {
-            "equipe1": "2\u00b0 EM",
-            "equipe2": "9\u00b0 ANO",
-            "modalidade": "Embaixadinha",
-            "vencedor": "2\u00b0 EM"
-        }
+
     ]
 }
