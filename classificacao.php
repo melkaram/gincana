@@ -34,7 +34,7 @@ arsort($pontos);
 
 <div class="container">
 
-<h1>🏆 Classificação</h1>
+<h1>Classificação</h1>
 
 <table>
 
